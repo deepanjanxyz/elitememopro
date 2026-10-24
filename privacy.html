@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Elite Memo Pro</title>
+  <meta name="description" content="How Elite Memo Pro handles your data: a local-first Android notes app with no account, no server and no INTERNET permission." />
+  <meta name="theme-color" content="#070a0f" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="icon" href="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="bg-atmosphere" aria-hidden="true">
+    <span class="bg-atmosphere__glow bg-atmosphere__glow--a"></span>
+    <span class="bg-atmosphere__glow bg-atmosphere__glow--b"></span>
+    <span class="bg-atmosphere__grid"></span>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__icon" src="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/icon.png" alt="" width="36" height="36" decoding="async" />
+        <span class="brand__text">Elite&nbsp;Memo&nbsp;Pro</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html#features">Features</a></li>
+          <li><a class="nav__link" href="index.html#screenshots">Screenshots</a></li>
+          <li><a class="nav__link" href="index.html#docs">Documentation</a></li>
+          <li><a class="nav__link" href="index.html#faq">FAQ</a></li>
+          <li><a class="nav__link is-active" href="privacy.html">Privacy</a></li>
+          <li><a class="nav__link" href="conduct.html">Community</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a class="btn btn--ghost btn--sm" href="https://github.com/deepanjanxyz/notepad" target="_blank" rel="noopener">Source</a>
+          <a class="btn btn--primary btn--sm" href="https://github.com/deepanjanxyz/notepad/releases/latest" target="_blank" rel="noopener">Download</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container container--narrow">
+        <p class="eyebrow"><span class="dot"></span> Legal</p>
+        <h1 class="page-hero__title">Privacy Policy</h1>
+        <p class="page-hero__lead">
+          This policy describes how <strong>Elite Memo Pro</strong> (<code>com.deepanjanxyz.notepad</code>) handles your data.
+          It reflects how the app actually behaves as built from its source repository: every statement below is based on the
+          app's source code, its <code>AndroidManifest.xml</code> files, its Gradle configuration and the signed APK
+          published in the Releases section.
+        </p>
+        <p class="page-hero__meta">Last updated: 12 October 2026</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container container--narrow">
+        <article class="card prose">
+          <h2>Summary</h2>
+          <p>
+            Elite Memo Pro is a local-first notes app. Your notes, drawings, labels, reminders and settings are stored on your
+            device. The app does not request the <code>INTERNET</code> permission, so it cannot open a network connection or
+            send data over the internet. It contains no analytics, advertising, tracking or crash-reporting components.
+          </p>
+
+          <h2>What the app stores on your device</h2>
+          <p>All app data is written to storage that is private to the app:</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Data</th><th>Where it is stored</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Notes — text, checklists and serialised drawings, including pin state, colour, labels, archive, trash and reminder times</td>
+                  <td>Room database <code>notes.db</code></td>
+                </tr>
+                <tr>
+                  <td>Labels</td>
+                  <td>Room database <code>notes.db</code> (<code>labels_table</code>)</td>
+                </tr>
+                <tr>
+                  <td>Theme, grid/list layout, and whether the app lock is enabled</td>
+                  <td>Preferences DataStore <code>notepad_settings</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Notes are not encrypted at rest by the app. They are protected by Android's app sandbox — another app cannot read
+            this app's private storage — and by any device encryption you have enabled.
+          </p>
+
+          <h2>Network access and data transmission</h2>
+          <p>
+            <strong>The app does not request the <code>INTERNET</code> permission.</strong> No <code>AndroidManifest.xml</code>
+            in this repository declares it, and the signed APK published in the Releases section does not contain it either.
+            On Android an app cannot open a network socket without this permission, so the app is unable to send your notes,
+            drawings, labels or settings — or any other data — over the internet.
+          </p>
+          <p>The permissions actually present in the installed app are:</p>
+          <ul>
+            <li><code>android.permission.USE_BIOMETRIC</code></li>
+            <li><code>android.permission.POST_NOTIFICATIONS</code></li>
+            <li><code>android.permission.VIBRATE</code></li>
+            <li><code>android.permission.WRITE_EXTERNAL_STORAGE</code> — capped at <code>maxSdkVersion="28"</code>, so it is requested only on Android 9 and below, to write a JSON backup into the public Downloads folder. On Android 10 and later the backup uses MediaStore and needs no runtime permission.</li>
+            <li><code>android.permission.ACCESS_NETWORK_STATE</code> — contributed by a dependency, not requested by the app itself. It allows reading whether a network is available; it does not grant network access.</li>
+          </ul>
+          <p>
+            The app contains no networking code: there is no HTTP client, no remote-backend client, and no authentication flow
+            anywhere in the source or in the shipped APK.
+          </p>
+          <p>
+            The app can hand a web address to another app: the Settings screen offers "GitHub" and "Issues" links, which are
+            opened through an Android <code>ACTION_VIEW</code> intent. In that case the browser — not Elite Memo Pro — fetches
+            the page, under the browser's own privacy policy.
+          </p>
+
+          <h2>Analytics, advertising, tracking and crash reporting</h2>
+          <p>
+            None. The app bundles no analytics, advertising, tracking or crash-reporting SDK — there is no Firebase,
+            Crashlytics, Google Play Services, ads, Sentry or comparable dependency in the Gradle files — and no such code
+            exists in the source.
+          </p>
+
+          <h2>Android permissions</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Permission</th><th>Why it is requested</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><code>USE_BIOMETRIC</code></td><td>To show the biometric or device-credential prompt when the optional app lock is enabled.</td></tr>
+                <tr><td><code>POST_NOTIFICATIONS</code></td><td>To post a reminder notification for a note you have scheduled. Requested on Android 13 and later.</td></tr>
+                <tr><td><code>VIBRATE</code></td><td>To let the reminder notification vibrate.</td></tr>
+                <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Capped at <code>maxSdkVersion="28"</code>. Used only on Android 9 and below, to write a JSON backup into the public Downloads folder. On Android 10 and later the backup uses MediaStore and needs no runtime permission.</td></tr>
+                <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Contributed by a dependency, not requested by the app itself. Lets the app read whether a network is available; it does not grant network access.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Apart from that Android 9-and-below storage permission, the app requests no camera, microphone, location, contacts, phone, or media permissions.</p>
+
+          <h2>App lock (biometrics and device credential)</h2>
+          <p>
+            The optional app lock uses Android's <code>BiometricPrompt</code> with <code>BIOMETRIC_STRONG</code> or
+            <code>DEVICE_CREDENTIAL</code>. The prompt is presented and evaluated by Android, and the app receives only a
+            success or failure callback. The app does not receive, process or store your fingerprint, face data, PIN, pattern
+            or password, and it cannot read them from the operating system.
+          </p>
+          <p>
+            The only thing the app stores for this feature is a single boolean value recording whether the lock is enabled. If
+            the platform cannot present the prompt at all, the app falls back to unlocking.
+          </p>
+
+          <h2>Reminders and notifications</h2>
+          <p>
+            Reminders are scheduled locally with WorkManager. When a reminder fires, a worker builds a notification containing
+            the note's title and a short preview of its content and posts it through Android's notification system. This
+            happens entirely on the device. If the note has been deleted or moved to trash by the time the reminder fires, no
+            notification is shown.
+          </p>
+
+          <h2>Backup and device transfer</h2>
+          <p>
+            The app declares <code>android:allowBackup="true"</code>, and its backup rules include the <code>database</code>
+            and <code>sharedpref</code> domains for both cloud backup and device-to-device transfer. This means Android's own
+            backup service — controlled by your device settings and, for cloud backup, by your Google account — can include the
+            app's notes database and shared preferences. That transfer is carried out by the operating system, not by the app,
+            and is outside the app's control. To prevent it, turn off backup for this app in your device settings.
+          </p>
+
+          <h2>Export, import and sharing</h2>
+          <p>
+            You can share a note as plain text through Android's standard share sheet, and you can back up or restore all notes
+            to a JSON file. A backup is written to the public Downloads folder — through MediaStore on Android 10 and later, and
+            with the capped <code>WRITE_EXTERNAL_STORAGE</code> permission on Android 9 and below. Restoring reads a JSON file
+            that you pick. None of this sends your data anywhere: sharing hands the text to whichever app you choose, and the
+            backup file stays on your device until you move or delete it.
+          </p>
+
+          <h2>Data sharing with third parties</h2>
+          <p>
+            The app does not share your data with anyone. It contains no third-party analytics, advertising or tracking
+            components, and it does not transmit data to any server.
+          </p>
+
+          <h2>Developer access to your content</h2>
+          <p>
+            The developer has no access to your notes, drawings, labels or settings. There is no account, no sync service and
+            no server component in the app, and the app cannot send your content anywhere.
+          </p>
+
+          <h2>Data deletion and retention</h2>
+          <p>You control your data from within the app:</p>
+          <ul>
+            <li>Deleting a note moves it to <strong>Trash</strong>, where it is kept for 30 days and then cleared automatically; emptying the trash, or deleting a note permanently, removes it sooner.</li>
+            <li>Emptying the trash, or permanently deleting a note, removes it from the app's database.</li>
+            <li>Uninstalling the app, or clearing its data from Android's app settings, removes everything the app stored, including the notes database and its settings.</li>
+          </ul>
+          <p>
+            The developer holds no copy of your data, so there is nothing to ask the developer to delete. If Android's backup
+            has copied the app's data (see "Backup and device transfer"), that copy is managed by your device or account and
+            can be removed through your Android or Google account backup settings.
+          </p>
+
+          <h2>Children's privacy</h2>
+          <p>
+            The app is a general-purpose notes application and is not directed at children. It has no account or sign-in and
+            gathers no personal information from any user, including children.
+          </p>
+
+          <h2>Changes to this policy</h2>
+          <p>
+            Changes to this policy are committed to this repository, so the file's history shows what changed and when. Because
+            the app's behaviour is defined by the code in this repository, this policy will be updated whenever the app begins
+            handling data differently.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            This project is hosted on GitHub. For privacy questions, open an issue at
+            <a href="https://github.com/deepanjanxyz/notepad/issues" target="_blank" rel="noopener">github.com/deepanjanxyz/notepad/issues</a>.
+            The repository does not publish a dedicated email address for privacy enquiries.
+          </p>
+
+          <h2>Verifying these statements</h2>
+          <p>Each claim above can be checked against the repository:</p>
+          <ul>
+            <li>Requested permissions — <code>app/src/main/AndroidManifest.xml</code></li>
+            <li>Local storage — <code>data/src/main/java/com/deepanjanxyz/notepad/data/local/</code> (Room database and DataStore)</li>
+            <li>App lock — <code>app/src/main/java/com/deepanjanxyz/notepad/MainActivity.kt</code></li>
+            <li>Reminders — <code>app/src/main/java/com/deepanjanxyz/notepad/worker/</code></li>
+            <li>Backup rules — <code>app/src/main/res/xml/backup_rules.xml</code> and <code>app/src/main/res/xml/data_extraction_rules.xml</code></li>
+            <li>Dependencies — <code>app/build.gradle.kts</code>, <code>core/build.gradle.kts</code>, <code>data/build.gradle.kts</code>, <code>features/build.gradle.kts</code></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/icon.png" alt="" width="32" height="32" loading="lazy" decoding="async" />
+        <div>
+          <p class="site-footer__name">Elite Memo Pro</p>
+          <p class="site-footer__tag">Local-first notes and sketches for Android.</p>
+        </div>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="footer-col">
+          <h2 class="footer-col__title">Product</h2>
+          <ul role="list">
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#screenshots">Screenshots</a></li>
+            <li><a href="index.html#docs">Documentation</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-col__title">Project</h2>
+          <ul role="list">
+            <li><a href="https://github.com/deepanjanxyz/notepad" target="_blank" rel="noopener">Source code</a></li>
+            <li><a href="https://github.com/deepanjanxyz/notepad/releases" target="_blank" rel="noopener">Releases</a></li>
+            <li><a href="https://github.com/deepanjanxyz/notepad/issues" target="_blank" rel="noopener">Issues</a></li>
+            <li><a href="conduct.html">Code of Conduct</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-col__title">Legal</h2>
+          <ul role="list">
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="https://github.com/deepanjanxyz/notepad/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container site-footer__bottom">
+      <p>&copy; <span id="year">2026</span> Deepanjan Biswas &middot; Elite Memo Pro is released under the MIT License.</p>
+      <p class="site-footer__disclaimer">Android is a trademark of Google LLC. Elite Memo Pro is not affiliated with Google.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
