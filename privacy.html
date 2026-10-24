@@ -133,9 +133,9 @@
 
           <h2>Analytics, advertising, tracking and crash reporting</h2>
           <p>
-            None. The app bundles no analytics, advertising, tracking or crash-reporting SDK — there is no Firebase,
-            Crashlytics, Google Play Services, ads, Sentry or comparable dependency in the Gradle files — and no such code
-            exists in the source.
+            None. The app bundles no analytics, advertising, tracking or crash-reporting SDK — there is no such
+            library, and no comparable third-party dependency, in the Gradle files — and no such code exists in the
+            source.
           </p>
 
           <h2>Android permissions</h2>
@@ -179,7 +179,7 @@
           <p>
             The app declares <code>android:allowBackup="true"</code>, and its backup rules include the <code>database</code>
             and <code>sharedpref</code> domains for both cloud backup and device-to-device transfer. This means Android's own
-            backup service — controlled by your device settings and, for cloud backup, by your Google account — can include the
+            backup service — controlled by your device settings and, for cloud backup, by the account you use for device backups — can include the
             app's notes database and shared preferences. That transfer is carried out by the operating system, not by the app,
             and is outside the app's control. To prevent it, turn off backup for this app in your device settings.
           </p>
@@ -215,7 +215,7 @@
           <p>
             The developer holds no copy of your data, so there is nothing to ask the developer to delete. If Android's backup
             has copied the app's data (see "Backup and device transfer"), that copy is managed by your device or account and
-            can be removed through your Android or Google account backup settings.
+            can be removed through your device or account backup settings.
           </p>
 
           <h2>Children's privacy</h2>
@@ -292,7 +292,6 @@
     </div>
     <div class="container site-footer__bottom">
       <p>&copy; <span id="year">2026</span> Deepanjan Biswas &middot; Elite Memo Pro is released under the MIT License.</p>
-      <p class="site-footer__disclaimer">Android is a trademark of Google LLC. Elite Memo Pro is not affiliated with Google.</p>
     </div>
   </footer>
 

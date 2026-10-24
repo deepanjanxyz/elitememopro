@@ -56,8 +56,8 @@
 
   /* Spacing */
   --gutter: clamp(1.15rem, 4vw, 2.5rem);
-  --section-y: clamp(4rem, 9vw, 7.5rem);
-  --maxw: 1180px;
+  --section-y: clamp(3.6rem, 7vw, 6.5rem);
+  --maxw: 1240px;
 
   /* Effects */
   --blur: saturate(150%) blur(16px);
@@ -224,6 +224,20 @@ code {
 .section-lead {
   color: var(--text-dim);
   font-size: clamp(1rem, 0.97rem + 0.3vw, 1.15rem);
+}
+
+/* Desktop: set the lead beside the title so the full width is used */
+@media (min-width: 1000px) {
+  .section-head {
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.9rem 3.5rem;
+    align-items: end;
+  }
+  .section-head .eyebrow { grid-column: 1 / -1; margin-bottom: 0; }
+  .section-head .section-title { margin-bottom: 0; }
+  .section-head .section-lead { margin-bottom: 0.4rem; }
 }
 
 /* Glass card */
@@ -430,12 +444,12 @@ code {
 .hero { padding-top: clamp(2.5rem, 6vw, 4.5rem); }
 .hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 4.5rem);
 }
 .hero__title {
-  font-size: clamp(2.1rem, 1.4rem + 3.6vw, 4rem);
+  font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.5rem);
   letter-spacing: -0.035em;
   margin-bottom: 1.15rem;
 }
@@ -478,12 +492,14 @@ code {
 .hero__visual {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
-  min-height: 480px;
+  min-height: 560px;
+  padding-inline: 2%;
 }
 .phone {
   position: relative;
-  width: min(300px, 78vw);
+  width: min(288px, 66vw);
   padding: 10px;
   border-radius: 42px;
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03));
@@ -521,8 +537,8 @@ code {
   box-shadow: var(--shadow-lg);
   animation: floaty 7s ease-in-out infinite;
 }
-.float-card--a { top: 12%; left: -4%; width: 190px; }
-.float-card--b { bottom: 10%; right: -4%; animation-delay: -3.5s; }
+.float-card--a { top: 19%; left: 0; width: 182px; }
+.float-card--b { bottom: 13%; right: 0; animation-delay: -3.5s; }
 .float-card__label {
   display: block;
   font-family: var(--font-mono);
@@ -597,8 +613,20 @@ code {
    ========================================================================== */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.1rem;
+}
+@media (min-width: 640px) {
+  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+  .feature { grid-column: span 4; }
+  .feature--half { grid-column: span 6; }
+  .feature--hero { grid-column: span 6; grid-row: span 2; }
 }
 .feature {
   padding: 1.6rem;
@@ -624,6 +652,46 @@ code {
 .feature__icon svg { width: 24px; height: 24px; }
 .feature__title { font-size: 1.12rem; margin-bottom: 0.45rem; }
 .feature__text { font-size: 0.93rem; color: var(--text-dim); }
+
+.feature--hero {
+  display: flex;
+  flex-direction: column;
+  padding: 1.9rem;
+  background:
+    radial-gradient(520px 260px at 100% 0%, var(--accent-soft), transparent 70%),
+    var(--surface);
+}
+.feature--hero .feature__title { font-size: 1.35rem; }
+.feature--hero .feature__text { font-size: 0.97rem; max-width: 34rem; }
+.feature__canvas {
+  margin-top: auto;
+  padding-top: 1.6rem;
+  display: grid;
+  gap: 0.9rem;
+}
+.feature__canvas svg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: rgba(3, 6, 10, 0.5);
+}
+.feature__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+}
+.feature__tools li {
+  padding: 0.34rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+}
 
 /* ==========================================================================
    10. Screenshots
@@ -668,6 +736,20 @@ code {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-mute);
+}
+
+/* Desktop: a real gallery grid instead of a scrolling strip */
+@media (min-width: 900px) {
+  .shots__track {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(178px, 1fr));
+    gap: 1.2rem;
+    overflow: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0.4rem;
+  }
+  .shot { width: auto; }
+  .shot:hover img { transform: translateY(-6px); }
 }
 
 /* ==========================================================================
@@ -939,7 +1021,6 @@ code {
   font-size: 0.82rem;
   color: var(--text-mute);
 }
-.site-footer__disclaimer { max-width: 32rem; }
 
 /* ==========================================================================
    16. Motion
@@ -977,7 +1058,6 @@ code {
   .hero__lead { margin-inline: auto; }
   .hero__copy { text-align: center; }
   .hero__actions, .hero__meta { justify-content: center; }
-  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .privacy { grid-template-columns: 1fr; }
   .trust__list { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1033,7 +1113,6 @@ code {
 }
 
 @media (max-width: 640px) {
-  .feature-grid { grid-template-columns: 1fr; }
   .trust__list { grid-template-columns: 1fr; }
   .float-card--a { left: -2%; top: 6%; }
   .float-card--b { right: -2%; }

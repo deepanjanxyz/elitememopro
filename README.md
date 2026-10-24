@@ -191,4 +191,3 @@ Common tasks:
 The website source is released under the **MIT License**, matching the app.
 Copyright © 2026 Deepanjan Biswas.
 
-Android is a trademark of Google LLC. Elite Memo Pro is not affiliated with Google.
