@@ -13,15 +13,42 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Elite Memo Pro — private notes and sketches for Android" />
   <meta property="og:description" content="Text notes, checklists and freehand drawing in one fast, local-first Android app. No account, no server, no INTERNET permission." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/featureGraphic.png" />
+  <meta property="og:site_name" content="Elite Memo Pro" />
+  <meta property="og:image" content="https://deepanjanxyz.github.io/elitememopro/assets/img/feature-graphic.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:image:alt" content="Elite Memo Pro — notes and freehand sketches for Android" />
   <meta property="og:url" content="https://deepanjanxyz.github.io/elitememopro/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Elite Memo Pro — private notes and sketches for Android" />
   <meta name="twitter:description" content="Text notes, checklists and freehand drawing in one fast, local-first Android app." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/featureGraphic.png" />
+  <meta name="twitter:image" content="https://deepanjanxyz.github.io/elitememopro/assets/img/feature-graphic.png" />
+  <meta name="twitter:image:alt" content="Elite Memo Pro — notes and freehand sketches for Android" />
 
-  <link rel="icon" href="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/icon.png" />
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/icon.png" />
+  <!-- Tells Google and other search engines this site is Elite Memo Pro, not a generic Pages site -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Elite Memo Pro",
+    "alternateName": "Elite Memo Pro — notes and sketches for Android",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Android 7.0+",
+    "url": "https://deepanjanxyz.github.io/elitememopro/",
+    "image": "https://deepanjanxyz.github.io/elitememopro/assets/img/icon-512.png",
+    "description": "Elite Memo Pro is a local-first Android notes app that brings text notes, checklists and freehand drawing together. No account, no server, no INTERNET permission.",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "license": "https://github.com/deepanjanxyz/notepad/blob/main/LICENSE",
+    "downloadUrl": "https://github.com/deepanjanxyz/notepad/releases/latest",
+    "author": { "@type": "Person", "name": "Deepanjan Biswas" }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +69,7 @@
   <header class="site-header" id="top">
     <div class="container site-header__inner">
       <a class="brand" href="#top">
-        <img class="brand__icon" src="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/icon.png" alt="" width="36" height="36" decoding="async" />
+        <img class="brand__icon" src="assets/img/icon-192.png" alt="Elite Memo Pro logo" width="36" height="36" decoding="async" />
         <span class="brand__text">Elite&nbsp;Memo&nbsp;Pro</span>
       </a>
 
@@ -57,7 +84,7 @@
           <li><a class="nav__link" href="#features">Features</a></li>
           <li><a class="nav__link" href="#screenshots">Screenshots</a></li>
           <li><a class="nav__link" href="#privacy">Privacy</a></li>
-          <li><a class="nav__link" href="#docs">Documentation</a></li>
+          <li><a class="nav__link" href="#about">About the app</a></li>
           <li><a class="nav__link" href="#faq">FAQ</a></li>
           <li><a class="nav__link" href="conduct.html">Community</a></li>
         </ul>
@@ -313,91 +340,50 @@
       </div>
     </section>
 
-    <!-- ================= DOCUMENTATION ================= -->
-    <section class="section section--alt" id="docs" aria-labelledby="docs-title">
+    <!-- ================= ABOUT THE APP ================= -->
+    <section class="section section--alt" id="about" aria-labelledby="about-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow"><span class="dot"></span> Documentation</p>
-          <h2 class="section-title" id="docs-title">Install, build and verify</h2>
-          <p class="section-lead">Everything you need to run Elite Memo Pro, check it for yourself, or build it from source.</p>
+          <p class="eyebrow"><span class="dot"></span> About the app</p>
+          <h2 class="section-title" id="about-title">Elite Memo Pro, in plain words</h2>
+          <p class="section-lead">Text notes and freehand drawings in one place &mdash; free, offline, and entirely yours.</p>
         </header>
 
-        <div class="docs">
-          <nav class="docs__nav" aria-label="Documentation sections">
-            <ul role="list">
-              <li><a href="#doc-install">Installation</a></li>
-              <li><a href="#doc-repro">Reproducible builds</a></li>
-              <li><a href="#doc-architecture">Architecture</a></li>
-              <li><a href="#doc-build">Build from source</a></li>
-              <li><a href="#doc-contributing">Contributing</a></li>
-              <li><a href="#doc-license">License</a></li>
+        <div class="about">
+          <article class="card about__card reveal">
+            <h3 class="about__card-title">Write it, or draw it</h3>
+            <p>Write notes with titles and checklist items, or sketch on a drawing canvas with pen, marker, highlighter, selection and eraser tools. Choose a canvas background &mdash; blank, ruled, grid or dotted &mdash; and undo or redo changes as you go.</p>
+          </article>
+
+          <article class="card about__card reveal">
+            <h3 class="about__card-title">Keep everything organised</h3>
+            <p>Labels, colours and pins keep your notes in order. Search titles, text and tags with colourful match highlighting, or filter by label and colour. Switch between grid and list layouts, and sort by last modified, created date, title or colour.</p>
+          </article>
+
+          <article class="card about__card reveal">
+            <h3 class="about__card-title">Archive, trash and reminders</h3>
+            <p>Archive notes to set them aside, or move them to Trash where they can be restored or permanently deleted &mdash; trashed notes are cleared automatically after 30 days. Set a reminder on a note and get a notification at the scheduled time.</p>
+          </article>
+
+          <article class="card about__card reveal">
+            <h3 class="about__card-title">Lock it, pin it, back it up</h3>
+            <p>An optional app lock asks for biometric authentication or your device credential when the app opens. Pin a checklist to your home screen with a widget, share a note as plain text, and back up or restore every note to a JSON file in Downloads.</p>
+          </article>
+
+          <article class="card about__card reveal">
+            <h3 class="about__card-title">Everything stays on your device</h3>
+            <p>Notes and labels are stored in the app's local Room database. There is no account, no sync service and no <code>INTERNET</code> permission, so nothing can leave your phone. Light, dark or system appearance &mdash; your choice.</p>
+          </article>
+
+          <article class="card about__card reveal">
+            <h3 class="about__card-title">Free and open source</h3>
+            <p>Elite Memo Pro is released under the <strong>MIT License</strong>: use it, study it, modify it and share it, including commercially, as long as the copyright notice is kept. Copyright &copy; 2026 Deepanjan Biswas.</p>
+            <ul class="doc__list" role="list">
+              <li><a href="https://github.com/deepanjanxyz/notepad" target="_blank" rel="noopener">Read the source code</a></li>
+              <li><a href="https://github.com/deepanjanxyz/notepad/releases" target="_blank" rel="noopener">Download a release</a></li>
+              <li><a href="conduct.html">Community guidelines</a></li>
             </ul>
-          </nav>
-
-          <div class="docs__body">
-            <article class="card doc reveal" id="doc-install">
-              <h3 class="doc__title">Installation</h3>
-              <p>Download the signed APK from the latest release and open it on your device. Elite Memo Pro runs on Android 7.0 (API 24) and newer, and the universal build works on every architecture.</p>
-              <pre class="code"><code># Grab the universal APK for the newest release
-curl -LO https://github.com/deepanjanxyz/notepad/releases/latest/download/EliteMemoPro-v1.0.24-24-universal.apk
-
-# Install it over ADB (or just tap the file on the device)
-adb install EliteMemoPro-v1.0.24-24-universal.apk</code></pre>
-              <p class="doc__note">Because the APK is installed outside an app store, Android will ask you to allow installs from your browser or file manager the first time.</p>
-            </article>
-
-            <article class="card doc reveal" id="doc-repro">
-              <h3 class="doc__title">Reproducible builds</h3>
-              <p>Elite Memo Pro publishes the exact APK the developer signed. F-Droid rebuilds the same commit from source; if the two match byte-for-byte, the developer's own signed APK is shipped, so your signature and update path never change.</p>
-              <ul class="doc__list" role="list">
-                <li><code>Binaries</code> points at the GitHub release asset.</li>
-                <li><code>AllowedAPKSigningKeys</code> pins the signing certificate (SHA-256).</li>
-                <li>Every release is tagged and the full commit hash is recorded.</li>
-              </ul>
-            </article>
-
-            <article class="card doc reveal" id="doc-architecture">
-              <h3 class="doc__title">Architecture</h3>
-              <p>Written in Kotlin with Jetpack Compose, split into focused Gradle modules so the domain layer stays free of Android dependencies.</p>
-              <div class="module-grid">
-                <div class="module"><span class="module__name">:app</span><span class="module__desc">Compose UI, navigation, app lock</span></div>
-                <div class="module"><span class="module__name">:domain</span><span class="module__desc">Use cases and models</span></div>
-                <div class="module"><span class="module__name">:data</span><span class="module__desc">Room database and DataStore</span></div>
-                <div class="module"><span class="module__name">:core</span><span class="module__desc">Shared utilities</span></div>
-                <div class="module"><span class="module__name">:features</span><span class="module__desc">Feature screens</span></div>
-              </div>
-              <p class="doc__note">Reminders are scheduled with WorkManager; notes, labels and settings live in an on-device Room database and Preferences DataStore.</p>
-            </article>
-
-            <article class="card doc reveal" id="doc-build">
-              <h3 class="doc__title">Build from source</h3>
-              <p>You need JDK 21 and the Android SDK (platform 37). The project builds with the Gradle wrapper.</p>
-              <pre class="code"><code>git clone https://github.com/deepanjanxyz/notepad.git
-cd notepad
-
-# Debug build
-./gradlew assembleDebug
-
-# Release build (needs your own signing config)
-./gradlew assembleRelease</code></pre>
-            </article>
-
-            <article class="card doc reveal" id="doc-contributing">
-              <h3 class="doc__title">Contributing</h3>
-              <p>Contributions are welcome. Keep the <code>:domain</code> module free of Android dependencies, keep unit tests green, and use Conventional Commits.</p>
-              <ul class="doc__list" role="list">
-                <li>Read the <a href="conduct.html">Code of Conduct</a>.</li>
-                <li>Open an <a href="https://github.com/deepanjanxyz/notepad/issues" target="_blank" rel="noopener">issue</a> to discuss a change first.</li>
-                <li>Follow <code>feat:</code>, <code>fix:</code>, <code>refactor:</code>, <code>docs:</code>, <code>chore:</code>.</li>
-              </ul>
-            </article>
-
-            <article class="card doc reveal" id="doc-license">
-              <h3 class="doc__title">License</h3>
-              <p>Elite Memo Pro is released under the <strong>MIT License</strong>. You are free to use, study, modify and redistribute it, including commercially, provided the copyright notice is kept.</p>
-              <p class="doc__note">Copyright &copy; 2026 Deepanjan Biswas.</p>
-            </article>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -443,6 +429,7 @@ cd notepad
     <section class="section download" aria-labelledby="download-title">
       <div class="container">
         <div class="card download__card reveal">
+          <img class="download__logo" src="assets/img/icon-192.png" alt="Elite Memo Pro logo" width="64" height="64" loading="lazy" decoding="async" />
           <div class="download__copy">
             <p class="eyebrow"><span class="dot"></span> Get the app</p>
             <h2 class="download__title" id="download-title">Download Elite Memo Pro</h2>
@@ -460,7 +447,7 @@ cd notepad
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <div class="site-footer__brand">
-        <img src="https://raw.githubusercontent.com/deepanjanxyz/notepad/main/fastlane/metadata/android/en-US/images/icon.png" alt="" width="32" height="32" loading="lazy" decoding="async" />
+        <img src="assets/img/icon-192.png" alt="Elite Memo Pro logo" width="32" height="32" loading="lazy" decoding="async" />
         <div>
           <p class="site-footer__name">Elite Memo Pro</p>
           <p class="site-footer__tag">Local-first notes and sketches for Android.</p>
@@ -473,7 +460,7 @@ cd notepad
           <ul role="list">
             <li><a href="#features">Features</a></li>
             <li><a href="#screenshots">Screenshots</a></li>
-            <li><a href="#docs">Documentation</a></li>
+            <li><a href="#about">About the app</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
