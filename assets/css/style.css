@@ -1051,6 +1051,8 @@ code {
   color: var(--accent);
 }
 .store-btn__icon svg { width: 1.15rem; height: 1.15rem; }
+.store-btn__logo { display: block; width: 1.3rem; height: 1.3rem; }
+.store-btn__logo--fdroid { width: 1.55rem; height: 1.55rem; border-radius: 0.35rem; }
 .store-btn__text { display: flex; flex-direction: column; line-height: 1.3; }
 .store-btn__label { font-weight: 600; font-size: 0.95rem; }
 .store-btn__sub { font-size: 0.78rem; color: var(--text-mute); }
