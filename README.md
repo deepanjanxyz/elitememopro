@@ -111,7 +111,7 @@ git push -u origin main
 The site is published within a minute or two at:
 
 ```
-https://deepanjanxyz.github.io/elitememopro/
+https://memo.deepanjan.xyz/
 ```
 
 > The site is fully static, so the `/ (root)` option is all you need. If you later move the files into a `docs/` folder,
